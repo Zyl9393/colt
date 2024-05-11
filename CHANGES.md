@@ -1,3 +1,6 @@
+# 2.0.1 (2024-05-12)
+* Add `/v2` to module name.
+
 # 2.0.0 (2024-05-12)
 * **BREAKING:** Renamed `RGB.Multiply()` to `RGB.Mul()` and `RGBA.Multiply()` to `RGBA.Mul()`.
 * Added `RGB.Sub()` and `RGBA.Sub()`.
