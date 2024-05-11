@@ -151,6 +151,16 @@ func (c RGBA) Add(other RGBA) RGBA {
 	return RGBA{c[0] + other[0], c[1] + other[1], c[2] + other[2], c[3] + other[3]}
 }
 
+// AddC adds the color components of other to c.
+func (c RGBA) AddC(other RGBA) RGBA {
+	return RGBA{c[0] + other[0], c[1] + other[1], c[2] + other[2], c[3]}
+}
+
+// Add3 adds the color components of other to c.
+func (c RGBA) Add3(other RGB) RGBA {
+	return RGBA{c[0] + other[0], c[1] + other[1], c[2] + other[2], c[3]}
+}
+
 // Sub subtracts other from c.
 func (c RGB) Sub(other RGB) RGB {
 	return RGB{c[0] - other[0], c[1] - other[1], c[2] - other[2]}
@@ -159,6 +169,16 @@ func (c RGB) Sub(other RGB) RGB {
 // Sub subtracts other from c.
 func (c RGBA) Sub(other RGBA) RGBA {
 	return RGBA{c[0] - other[0], c[1] - other[1], c[2] - other[2], c[3] - other[3]}
+}
+
+// Sub subtracts the color components of other from c.
+func (c RGBA) SubC(other RGBA) RGBA {
+	return RGBA{c[0] - other[0], c[1] - other[1], c[2] - other[2], c[3]}
+}
+
+// Sub subtracts the color components of other from c.
+func (c RGBA) Sub3(other RGB) RGBA {
+	return RGBA{c[0] - other[0], c[1] - other[1], c[2] - other[2], c[3]}
 }
 
 // Alpha returns RGBA{c[0], c[1], c[2], alpha}.
