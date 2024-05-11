@@ -31,6 +31,18 @@ func LinearbAllNew(values []uint8) []float32 {
 	return linear
 }
 
+// Linear16AllNew returns a new slice containing the linearized elements of values assuming they are sRGB-encoded color components, or nil if values is empty.
+func Linear16AllNew(values []uint16) []float32 {
+	if len(values) == 0 {
+		return nil
+	}
+	linear := make([]float32, len(values), len(values))
+	for i, v := range values {
+		linear[i] = Linear16(v)
+	}
+	return linear
+}
+
 // StandardAll encodes each element in values in sRGB assuming it is an linear RGB color component.
 func StandardAll(values []float32) {
 	for i, v := range values {
@@ -58,6 +70,18 @@ func StandardbAllNew(values []float32) []uint8 {
 	standard := make([]uint8, len(values), len(values))
 	for i, v := range values {
 		standard[i] = Standardb(v)
+	}
+	return standard
+}
+
+// Standard16AllNew returns a new slice containing the sRGB-encoded elements of values assuming they are linear RGB color components, or nil if values is empty.
+func Standard16AllNew(values []float32) []uint16 {
+	if len(values) == 0 {
+		return nil
+	}
+	standard := make([]uint16, len(values), len(values))
+	for i, v := range values {
+		standard[i] = Standard16(v)
 	}
 	return standard
 }
