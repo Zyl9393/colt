@@ -131,13 +131,13 @@ func (c RGBA) Blend(other RGBA, amount float32) RGBA {
 	return RGBA{c[0]*inverse + other[0]*amount, c[1]*inverse + other[1]*amount, c[2]*inverse + other[2]*amount, c[3]*inverse + other[3]*amount}
 }
 
-// Multiply multiplies each component of c with amount.
-func (c RGB) Multiply(amount float32) RGB {
+// Mul multiplies each component of c with amount.
+func (c RGB) Mul(amount float32) RGB {
 	return RGB{c[0] * amount, c[1] * amount, c[2] * amount}
 }
 
-// Multiply multiplies each component of c with amount.
-func (c RGBA) Multiply(amount float32) RGBA {
+// Mul multiplies each component of c with amount.
+func (c RGBA) Mul(amount float32) RGBA {
 	return RGBA{c[0] * amount, c[1] * amount, c[2] * amount, c[3] * amount}
 }
 
