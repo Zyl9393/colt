@@ -37,6 +37,16 @@ func (c RGBA) Standard() SRGBA {
 	return SRGBA{Standardb(c[0]), Standardb(c[1]), Standardb(c[2]), ByteEncoded(c[3])}
 }
 
+// Alpha returns SRGBA{c[0], c[1], c[2], alpha}.
+func (c SRGB) Alpha(alpha uint8) SRGBA {
+	return SRGBA{c[0], c[1], c[2], alpha}
+}
+
+// SRGB returns SRGB{c[0], c[1], c[2]}.
+func (c SRGBA) SRGB(alpha uint8) SRGB {
+	return SRGB{c[0], c[1], c[2]}
+}
+
 // Luminance returns the luminance of the color using standard luminance values.
 func (c RGB) Luminance() float32 {
 	return c[0]*luminanceRed + c[1]*luminanceGreen + c[2]*luminanceBlue
@@ -107,6 +117,16 @@ func (c RGB) Sub(other RGB) RGB {
 // Sub subtracts other from c.
 func (c RGBA) Sub(other RGBA) RGBA {
 	return RGBA{c[0] - other[0], c[1] - other[1], c[2] - other[2], c[3] - other[3]}
+}
+
+// Alpha returns RGBA{c[0], c[1], c[2], alpha}.
+func (c RGB) Alpha(alpha float32) RGBA {
+	return RGBA{c[0], c[1], c[2], alpha}
+}
+
+// RGB returns RGB{c[0], c[1], c[2]}.
+func (c RGBA) RGB() RGB {
+	return RGB{c[0], c[1], c[2]}
 }
 
 func (c *RGB) clamp() {
