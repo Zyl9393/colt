@@ -1,3 +1,7 @@
+# 3.0.0 (2024-05-12)
+* Remove unused `alpha` parameter from `SRGBA.SRGB()`.
+* Rename `SRGBA.SRGB()` to `SRGBA.NoAlpha()` and `RGBA.RGB()` to `RGBA.NoAlpha()`.
+
 # 2.0.1 (2024-05-12)
 * Add `/v2` to module name.
 

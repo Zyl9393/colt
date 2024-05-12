@@ -84,8 +84,8 @@ func (c SRGB) Alpha(alpha uint8) SRGBA {
 	return SRGBA{c[0], c[1], c[2], alpha}
 }
 
-// SRGB returns SRGB{c[0], c[1], c[2]}.
-func (c SRGBA) SRGB(alpha uint8) SRGB {
+// NoAlpha returns SRGB{c[0], c[1], c[2]}.
+func (c SRGBA) NoAlpha() SRGB {
 	return SRGB{c[0], c[1], c[2]}
 }
 
@@ -186,8 +186,8 @@ func (c RGB) Alpha(alpha float32) RGBA {
 	return RGBA{c[0], c[1], c[2], alpha}
 }
 
-// RGB returns RGB{c[0], c[1], c[2]}.
-func (c RGBA) RGB() RGB {
+// NoAlpha returns RGB{c[0], c[1], c[2]}.
+func (c RGBA) NoAlpha() RGB {
 	return RGB{c[0], c[1], c[2]}
 }
 
