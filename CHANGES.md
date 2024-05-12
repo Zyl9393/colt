@@ -1,9 +1,9 @@
 # 3.0.0 (2024-05-12)
-* Remove unused `alpha` parameter from `SRGBA.SRGB()`.
-* Rename `SRGBA.SRGB()` to `SRGBA.NoAlpha()` and `RGBA.RGB()` to `RGBA.NoAlpha()`.
+* **BREAKING:** Removed unused `alpha` parameter from `SRGBA.SRGB()`.
+* **BREAKING:** Renamed `SRGBA.SRGB()` to `SRGBA.NoAlpha()` and `RGBA.RGB()` to `RGBA.NoAlpha()`.
 
 # 2.0.1 (2024-05-12)
-* Add `/v2` to module name.
+* Added `/v2` to module name.
 
 # 2.0.0 (2024-05-12)
 * **BREAKING:** Renamed `RGB.Multiply()` to `RGB.Mul()` and `RGBA.Multiply()` to `RGBA.Mul()`.
