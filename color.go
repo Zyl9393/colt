@@ -21,12 +21,12 @@ type RGBA [4]float32
 
 // Std returns c as a color.RGBA, assuming it is alpha-premultiplied.
 func (c SRGB) Std() color.RGBA {
-	return color.RGBA{c[0], c[1], c[2], 1}
+	return color.RGBA{c[0], c[1], c[2], 255}
 }
 
 // StdN returns c as a color.NRGBA, assuming it is not alpha-premultiplied.
 func (c SRGB) StdN() color.NRGBA {
-	return color.NRGBA{c[0], c[1], c[2], 1}
+	return color.NRGBA{c[0], c[1], c[2], 255}
 }
 
 // Std returns c as a color.RGBA, assuming it is alpha-premultiplied.
@@ -41,12 +41,12 @@ func (c SRGBA) StdN() color.NRGBA {
 
 // Std lossily returns c as a color.RGBA64, assuming it is alpha-premultiplied.
 func (c RGB) Std() color.RGBA64 {
-	return color.RGBA64{Standard16(c[0]), Standard16(c[1]), Standard16(c[2]), 1}
+	return color.RGBA64{Standard16(c[0]), Standard16(c[1]), Standard16(c[2]), 0xffff}
 }
 
 // StdN lossily returns c as a color.NRGBA64, assuming it is not alpha-premultiplied.
 func (c RGB) StdN() color.NRGBA64 {
-	return color.NRGBA64{Standard16(c[0]), Standard16(c[1]), Standard16(c[2]), 1}
+	return color.NRGBA64{Standard16(c[0]), Standard16(c[1]), Standard16(c[2]), 0xffff}
 }
 
 // Std lossily returns c as a color.RGBA64, assuming it is alpha-premultiplied.

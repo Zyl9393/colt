@@ -1,3 +1,6 @@
+# 3.1.1 (2024-05-13)
+* Fixed implementations of `SRGB.Std()`, `SRGB.StdN()`, `RGB.Std()` and `RGB.StdN()` using wrong alpha.
+
 # 3.1.0 (2024-05-13)
 * Added `RGB.SubC()`.
 * Fixed API documentation of `RGBA.SubC()` and `RGBA.Sub3()`.
