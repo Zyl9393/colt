@@ -166,6 +166,11 @@ func (c RGB) Sub(other RGB) RGB {
 	return RGB{c[0] - other[0], c[1] - other[1], c[2] - other[2]}
 }
 
+// SubC subtracts the color components of other from c.
+func (c RGB) SubC(other RGBA) RGB {
+	return RGB{c[0] - other[0], c[1] - other[1], c[2] - other[2]}
+}
+
 // Sub subtracts other from c.
 func (c RGBA) Sub(other RGBA) RGBA {
 	return RGBA{c[0] - other[0], c[1] - other[1], c[2] - other[2], c[3] - other[3]}

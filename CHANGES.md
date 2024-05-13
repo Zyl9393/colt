@@ -1,4 +1,5 @@
-# 3.0.1 (2024-05-13)
+# 3.1.0 (2024-05-13)
+* Added `RGB.SubC()`.
 * Fixed API documentation of `RGBA.SubC()` and `RGBA.Sub3()`.
 
 # 3.0.0 (2024-05-12)
