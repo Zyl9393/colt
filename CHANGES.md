@@ -1,3 +1,6 @@
+# 3.0.1 (2024-05-13)
+* Fixed API documentation of `RGBA.SubC()` and `RGBA.Sub3()`.
+
 # 3.0.0 (2024-05-12)
 * **BREAKING:** Removed unused `alpha` parameter from `SRGBA.SRGB()`.
 * **BREAKING:** Renamed `SRGBA.SRGB()` to `SRGBA.NoAlpha()` and `RGBA.RGB()` to `RGBA.NoAlpha()`.
