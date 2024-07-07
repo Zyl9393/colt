@@ -3,9 +3,9 @@ package colt
 import "image/color"
 
 // https://en.wikipedia.org/wiki/Relative_luminance
-const luminanceRed float32 = 0.2126
-const luminanceGreen float32 = 0.7152
-const luminanceBlue float32 = 0.0722
+const LuminanceRed float32 = 0.2126
+const LuminanceGreen float32 = 0.7152
+const LuminanceBlue float32 = 0.0722
 
 // SRGB represents an sRGB color where each color component is encoded in a byte.
 type SRGB [3]uint8
@@ -91,12 +91,12 @@ func (c SRGBA) NoAlpha() SRGB {
 
 // Luminance returns the luminance of the color using standard luminance values.
 func (c RGB) Luminance() float32 {
-	return c[0]*luminanceRed + c[1]*luminanceGreen + c[2]*luminanceBlue
+	return c[0]*LuminanceRed + c[1]*LuminanceGreen + c[2]*LuminanceBlue
 }
 
 // Luminance returns the luminance of the color using standard luminance values, multiplied by its alpha value.
 func (c RGBA) Luminance() float32 {
-	return (c[0]*luminanceRed + c[1]*luminanceGreen + c[2]*luminanceBlue) * c[3]
+	return (c[0]*LuminanceRed + c[1]*LuminanceGreen + c[2]*LuminanceBlue) * c[3]
 }
 
 // LuminanceCustom returns the luminance of the color using given luminance values.

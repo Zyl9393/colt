@@ -1,3 +1,6 @@
+# 3.2.0 (2024-07-07)
+* Make luminance constants public.
+
 # 3.1.1 (2024-05-13)
 * Fixed implementations of `SRGB.Std()`, `SRGB.StdN()`, `RGB.Std()` and `RGB.StdN()` using wrong alpha.
 
